@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: skoldatabas
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: skola
+      MARIADB_DATABASE: min_skoldatabas
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
