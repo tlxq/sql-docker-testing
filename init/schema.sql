@@ -70,8 +70,9 @@ CREATE TABLE `personer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `fnamn` varchar(40) DEFAULT NULL,
   `enamn` varchar(40) DEFAULT NULL,
+  `fodelsedatum` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -81,13 +82,15 @@ CREATE TABLE `personer` (
 LOCK TABLES `personer` WRITE;
 /*!40000 ALTER TABLE `personer` DISABLE KEYS */;
 INSERT INTO `personer` VALUES
-(1,'Kalle','Anka'),
-(2,'Kajsa','Anka'),
-(3,'Knatte','Anka'),
-(4,'Tjatte','Anka'),
-(5,'Fnatte','Anka'),
-(6,'Knase','Anka'),
-(7,'Alexander','Lukas');
+(1,'Kalle','Anka','1934-07-09'),
+(2,'Kajsa','Anka','1937-09-01'),
+(3,'Knatte','Anka','1937-10-17'),
+(4,'Tjatte','Anka','1937-10-17'),
+(5,'Fnatte','Anka','1937-10-17'),
+(6,'Knase','Anka','1932-08-02'),
+(7,'Alexander','Lukas','1932-02-02'),
+(8,'Tom_','Larsson','1992-02-19'),
+(9,'Tom','_Larsson','1992-02-19');
 /*!40000 ALTER TABLE `personer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -100,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-31 18:27:06
+-- Dump completed on 2026-04-01 13:53:42
